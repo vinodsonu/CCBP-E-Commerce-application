@@ -1,0 +1,5 @@
+export const LOGIN_PATH = "/login"
+export const HOME_PATH = "/"
+export const PRODUCTS_PATH = "/products"
+export const CART_PATH = "/cart"
+export const NOT_FOUND_PATH = "/not-found"
