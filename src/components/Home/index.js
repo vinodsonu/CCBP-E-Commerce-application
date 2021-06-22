@@ -1,15 +1,15 @@
-import Cookies from 'js-cookie'
-import {Redirect, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import Header from '../common/Header'
 import Button from '../common/Button'
-import {LOGIN_PATH,PRODUCTS_PATH} from '../../constants/RouteConstants'
+import {PRODUCTS_PATH} from '../../constants/RouteConstants'
+import { getCookie } from '../../utils/StorageUtils'
 import './index.css'
 
 const Home = () => {
-  const jwtToken = Cookies.get('jwt_token')
-  if (jwtToken === undefined) {
-    return <Redirect to={LOGIN_PATH} />
+  const jwtToken = getCookie()
+  if (jwtToken === undefined) {    
+    <Redirect to={LOGIN_PATH}/>
   }
   return (
     <>

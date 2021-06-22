@@ -3,13 +3,13 @@ import Cookie from 'js-cookie'
 
 import './index.css'
 import Button from '../Button'
-import { HOME_PATH,PRODUCTS_PATH,CART_PATH } from '../../../constants/RouteConstants'
+import { HOME_PATH,PRODUCTS_PATH,CART_PATH,LOGIN_PATH } from '../../../constants/RouteConstants'
 
 const Header = props => {
   const onClickLogout = () => {
     Cookie.remove('jwt_token')
     const {history} = props
-    history.replace('/login')
+    history.replace({LOGIN_PATH})
   }
   return (
     <nav className="nav-header">

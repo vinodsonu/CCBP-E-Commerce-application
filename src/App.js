@@ -6,11 +6,7 @@ import Products from './components/Products'
 import Cart from './components/Cart'
 import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
-import {LOGIN_PATH,
-  HOME_PATH,
-  PRODUCTS_PATH,
-  CART_PATH,
-  NOT_FOUND_PATH} from './constants/RouteConstants'
+import {LOGIN_PATH, HOME_PATH, PRODUCTS_PATH, CART_PATH, NOT_FOUND_PATH} from './constants/RouteConstants'
 
 import './App.css'
 

@@ -5,6 +5,8 @@ import {Redirect} from 'react-router-dom'
 import LoginForm from '../../components/LoginForm'
 import {HOME_PATH} from '../../constants/RouteConstants'
 import {setCookie} from '../../utils/StorageUtils'
+import { getJwtToken } from '../../utils/ApiUtils'
+
 
 class LoginRoute extends Component {
   state = {
@@ -36,12 +38,7 @@ class LoginRoute extends Component {
     event.preventDefault()
     const {username, password} = this.state
     const userDetails = {username, password}
-    const url = 'https://apis.ccbp.in/login'
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(userDetails),
-    }
-    const response = await fetch(url, options)
+    const response = await getJwtToken(userDetails)
     const data = await response.json()
     if (response.ok === true) {
       this.onSubmitSuccess(data.jwt_token)

@@ -1,19 +1,10 @@
 import Loader from 'react-loader-spinner'
 
-import ProductCard from '../ProductCard'
+import { sortbyOptions } from '../../constants/DataConstants'
+import ProductCard from '../common/ProductCard'
 import ProductsHeader from '../ProductsHeader'
 import './index.css'
 
-const sortbyOptions = [
-  {
-    optionId: 'PRICE_HIGH',
-    displayText: 'Price (High-Low)',
-  },
-  {
-    optionId: 'PRICE_LOW',
-    displayText: 'Price (Low-High)',
-  },
-]
 
 const AllProductsSection = (props) => {
 
